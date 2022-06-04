@@ -87,5 +87,6 @@ rm -f packages.microsoft.gpg
 sudo apt install -y apt-transport-https
 sudo apt update
 sudo apt install -y code
+sudo update-alternatives --set editor /usr/bin/code
 ```
 
