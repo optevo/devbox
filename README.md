@@ -57,11 +57,12 @@ fi
 ```
 
 If VMWare is used:
-`sudo apt install -y open-vm-tools-desktop`
+- `sudo apt install -y open-vm-tools-desktop`
 
 ## Steup rust
-Install instructions copied from [here](https://www.rust-lang.org/tools/install).
+Install instructions adapted from [here](https://www.rust-lang.org/tools/install).
 ```
+sudo apt install -y curl
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
