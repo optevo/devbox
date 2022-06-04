@@ -31,7 +31,7 @@ Setup as follows order:
 To avoid unintentionally modifying the operating system, install sudo.
 
 1. Login as root
-2. `apt install sudo`
+2. `apt install -y sudo`
 3. `adduser user sudo`
 4. `reboot now`
 5. Login as user
@@ -56,4 +56,19 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 fi
 ```
 
+## Steup rust
+Install instructions copied from [here](https://www.rust-lang.org/tools/install).
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+## Setup vscode
+Install instructions copied from [here](https://code.visualstudio.com/docs/setup/linux).
+```
+sudo apt install -y wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
+```
 
