@@ -31,10 +31,12 @@ Setup as follows order:
 To avoid unintentionally modifying the operating system, install sudo.
 
 1. Login as root
-2. `apt install -y sudo`
-3. `adduser user sudo`
-4. `reboot now`
-5. Login as user
+2. `apt update`
+3. `apt install -y sudo`
+4. `adduser user sudo`
+5. `passwd -d root # to disable logging in as root`
+6. `reboot now`
+7. Login as user
 
 ## Setup autologin
 It there is only one user and security within the guest operating system is not important, autologin can be setup as follows:
@@ -67,12 +69,15 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ## Setup vscode
-Install instructions copied from [here](https://code.visualstudio.com/docs/setup/linux).
+Install instructions adapted from [here](https://code.visualstudio.com/docs/setup/linux).
 ```
 sudo apt install -y wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
 rm -f packages.microsoft.gpg
+sudo apt install -y apt-transport-https
+sudo apt update
+sudo apt install -y code
 ```
 
