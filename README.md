@@ -46,7 +46,7 @@ It there is only one user and security within the guest operating system is not 
 ## Setup window manager
 As there are a small number of applications with UIs that need to be used (the IDE, a browser and a terminal being the main three), a minimal window manager that supports quick switching between applications, full screen and a variety of shared screen configurations, all with customisable keyboard layouts is desirable.
 The [i3 window manager](https://i3wm.org/) is flexible and easy to configure.
-1. `sudo apt install i3 xorg`
+1. `sudo apt install -y i3 xorg`
 2. `echo ‘exec i3’ > ~/.xsession`
 3. `vi ~/.bash_profile`
 4. Add this to `.bash_profile`
@@ -55,6 +55,9 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
 ```
+
+If VMWare is used:
+`sudo apt install -y open-vm-tools-desktop`
 
 ## Steup rust
 Install instructions copied from [here](https://www.rust-lang.org/tools/install).
