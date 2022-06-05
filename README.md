@@ -1,9 +1,12 @@
 # Introduction
-The goal of Devbox, is to be the only development tool you'll ever need.
+The goal of Devbox, is to be the only development tool you'll ever need. Devbox aims to:
+- lower the barrier of entry to programming, especially when starting with a new programming language.
+- reduce the time spent maintaining typical development workflows.
 
-# Why?
-The high level problem that Devbox addresses is to to lower the barrier of entry to programming, especially when starting with a new programming language. There are typically a lot of components that need to be installed and configured before a line of code can be written. There are also many options for these tools that are configured in different ways so it's impractical to see what each one does then make it work nicely with other tools.
+# Why might you use Devbox?
+There are typically many components that need to be installed and configured before a line of code can be written - and it's even more time consuming to find all the tools that may be useful and make sure they work (by themselves and with each other). Then there's the challenge of staying up to date.
 
+# What is Devbox?
 In practice, Devbox is should be (almost) as easy to get running as installing a typical application. In reality, Devbox is a collection of programming languages and development tools, generally installed in a virtual machine, that have been pre-configured to work well together and let you get started with development in a matter of minutes. It includes an editors/IDEs configured to work with the desired language(s) as well as all the tools and framworks configured and ready to use.
 
 The idea of virtual machine appliances or containerised applications is not new but they are generally built for end user, visual applications.
