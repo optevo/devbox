@@ -41,8 +41,8 @@ passwd -d user # The user 'user' can now login without a password.
 If passwords are removed, the login process can be streamlined by always logging in the default user.
 
 ```
-cd /etc/systemd/system/getty.target.wants
-sed -i "s/ExecStart=.*/ExecStart=-\/sbin\/agetty -a user %I/g" ./getty@tty1.service
+cd /lib/systemd/system
+sed -i "s/ExecStart=.*/ExecStart=-\/sbin\/agetty -a user %I/g" ./getty@.service
 ```
 
 ## Setup window manager
