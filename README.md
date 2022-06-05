@@ -1,20 +1,17 @@
-# Common development setup
-How to set up a general development environment.
+# Introduction
+This is a bevbox, your development box. Think of it as an application that runs "out of the box" to lets you start development in a matter of minutes. It includes an editor/IDE configured to work with the desired language(s) as well as all the tools and framworks configured and ready to use. The idea of virtual machine appliances (or containerised applications) is not new but they are generally not used for end user, visual applications.
 
-# Principles
-The development environment will run in a virtual machine such as [VirtualBox](https://www.virtualbox.org/) or [VMWare Player](https://www.vmware.com/au/products/workstation-player.html). There are many reasons for running a development environment in a virtual machine:
-- Uses a clean, dediated operating system which can be set up with the language toolchain and libraries, IDE, Window Manager, Shell, Colour Schemas, Browsers and other software that can be customised as needed.
-- Is not polluted by installs made on the host operating system.
-- Can be copied to other hosts.
+# Architecture
+Standard components are applications that make up the core of Devbox. They are not likely to change. Each standard component has been selected from a range of alternatives for specific reasons.
 
-Configure the VM with the desired amount of RAM and Disk Space and point the CD to use the Guest Operating System ISO.
+## Standard components
+- A virtual machine / hypervisor. [VirtualBox](https://www.virtualbox.org/) and [VMWare Player](https://www.vmware.com/au/products/workstation-player.html) are both free and run on a Windows, MacOS or Linux host.
+- A guest operating system: [Debian](https://www.debian.org/). The [stable minimal install](https://www.debian.org/CD/netinst/) has been selected because of its minimal initial footprint, breadth of supported applications and, importantly, its stability.
+- A tiling window manager: [i3](https://i3wm.org/). This arranges applications and help give Devbox the feel of a single "application". It can arrange development tools such as the editor, terminal and browser. It enables these to be displayed full-screen or side by side in many different ways. It can also switch between multiple virtual desktops, supports keyboard shorcuts and exposes its features through a configuration file.
+- A shell : [Zsh](https://www.zsh.org/). This is used both interactively and for scripting. It is used as it has interactive features that make it useful for development.
 
-# Guest Operating System - Debian Linux
-Preferred because:
-- There is a strong focus on stability.
-- It supports most necessary development components (with the exception of MacOS or Windows specific development)
+These components are the core of this Devbox; they are not designed to be substituted and if you like the idea of Devbox but don't like the components, fork it and change them. However, with these base set of components, Devbox can support multiple langauges and editors.
 
-The minimal ISO image can be downloaded from [here](https://www.debian.org/CD/netinst/)
 
 # Debian base installation
 Using the graphical installer the following configuration is recommended:
