@@ -36,6 +36,12 @@ Devbox intends to support multiple development tools. The primary development to
 
 As there may be multiple LSCs and DTs, there could end up being quite a large number of combinations supported. This is an area where the community can help contribute.
 
+# Component installers
+Each LSC and DT is packaged as a discrete install script.
+- Components can be installed in any order.
+- Components can be installed mutiple times. A repeat installation will either set the current component back to standard or do nothing.
+- Components can be uninstalled in any order and will uninstall cleanly.
+
 # Installation
 Create a virtual machine instance with the desired configuration and set the CD drive to point to the Debian minimal install ISO available from [here](https://www.debian.org/CD/netinst/).
 
