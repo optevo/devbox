@@ -1,8 +1,7 @@
 #!/bin/sh
-apt install -y sudo zsh
-adduser user sudo
-echo "Hello 1"
+#apt install -y sudo zsh
+#adduser user sudo
 #passwd -d root
 #passwd -d user
-chsh -s /bin/zsh user
-echo "Hello 2"
+#chsh -s /bin/zsh user
+echo "Hello"
