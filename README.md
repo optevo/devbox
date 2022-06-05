@@ -33,16 +33,9 @@ Using the graphical installer the following configuration is recommended:
 apt update
 apt install -y sudo wget zsh
 adduser user sudo # enable sudo for user 'user'
-passwd -d root # The user 'root' can now login without a password. The commands 'su' and 'sudo' no longer need passwords
-passwd -d user # The user 'user' can now login without a password.
-```
-
-## Setup autologin
-If passwords are removed, the login process can be streamlined by always logging in the default user.
-
-```
-cd /lib/systemd/system
-sed -i "s/ExecStart=.*/ExecStart=-\/sbin\/agetty -a user %I/g" ./getty@.service
+sed -i "s/ExecStart=.*/ExecStart=-\/sbin\/agetty -a user %I/g" /lib/systemd/system/getty@.service # user will auto-login
+passwd -d root # The user 'root' can now switch to root (e.g. use su or sudo) without a password
+passwd -d user # The user 'user' can now switch to user without a password
 ```
 
 ## Setup window manager
