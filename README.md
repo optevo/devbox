@@ -30,7 +30,6 @@ Using the graphical installer the following configuration is recommended:
 - wget: Can download other scripts to execute. Smaller than curl
 - zsh: Has autocomplete and other features that makes development easier.
 ```
-apt update
 apt install -y wget
 wget -q -O setup.sh https://raw.githubusercontent.com/optevo/devbox/main/setup.sh
 chmod u+x ./setup.sh
