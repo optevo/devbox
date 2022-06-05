@@ -73,7 +73,7 @@ The [i3 window manager](https://i3wm.org/) is flexible, small and easy to config
 1. `sudo apt install -y i3 xorg open-vm-tools-desktop`
 2. `echo ‘exec i3’ > ~/.xsession` # i3 will be executed when X starts.
 3. `vi ~/.bash_profile`
-4. Add this to `.bash_profile` # X will start on login.
+4. Add this to `.bash_profile` and `.zprofile`
 ```
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
