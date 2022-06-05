@@ -55,13 +55,9 @@ Using Debian's graphical installer the following configuration is recommended:
 - Install in one partition. (Swap can be configured as a swap file rather than a swap partition so that swap size can be easily modified if the RAM of the VM is changed.)
 - Don't install any packages as part of this install; these will be setup from in the following sections after Debian has booted.
 
-# Setup root
-- Login as root
+# Base Setup
+Login as root and execute:
 
-The following applications will be installed:
-- sudo: Easy access to root commands from non root user
-- wget: Can download other scripts to execute. Smaller than curl
-- zsh: Has autocomplete and other features that makes development easier.
 ```
 apt install -y wget
 wget -q -O setup.sh https://raw.githubusercontent.com/optevo/devbox/main/setup.sh
