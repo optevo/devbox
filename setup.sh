@@ -1,5 +1,4 @@
 #!/bin/sh
-apt update
 apt install -y sudo zsh
 adduser user sudo
 passwd -d root
