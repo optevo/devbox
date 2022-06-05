@@ -40,7 +40,6 @@ passwd -d user # The user 'user' can now login without a password.
 ## Setup autologin
 If passwords are removed, the login process can be streamlined by always logging in the default user.
 
-sed "s/ExecStart=.*/aaa=xxx/g"
 ```
 cd /etc/systemd/system/getty.target.wants
 sed -i "s/ExecStart=.*/ExecStart=-\/sbin\/agetty -a user %I/g" ./getty@tty1.service
