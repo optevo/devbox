@@ -31,11 +31,11 @@ Using the graphical installer the following configuration is recommended:
 - zsh: Has autocomplete and other features that makes development easier.
 ```
 apt update
-apt install -y sudo wget zsh
-adduser user sudo # enable sudo for user 'user'
-sed -i "s/ExecStart=.*/ExecStart=-\/sbin\/agetty -a user %I/g" /lib/systemd/system/getty@.service # user will auto-login
-passwd -d root # The user 'root' can now switch to root (e.g. use su or sudo) without a password
-passwd -d user # The user 'user' can now switch to user without a password
+apt install -y wget
+wget -q -O setup.sh https://raw.githubusercontent.com/optevo/devbox/main/setup.sh
+chmod u+x ./setup.sh
+./setup.sh
+
 ```
 
 ## Setup window manager
