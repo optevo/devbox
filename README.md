@@ -17,10 +17,10 @@ While Devbox comes with "batteries included" it is designed to support:
 Standard components are applications that make up the core of Devbox. They are not likely to change. Each standard component has been selected from a range of alternatives for specific reasons.
 
 ## Standard components
-- A virtual machine / hypervisor. [VirtualBox](https://www.virtualbox.org/) and [VMWare Player](https://www.vmware.com/au/products/workstation-player.html) are both free and run on a Windows, MacOS or Linux host.
-- A guest operating system: [Debian](https://www.debian.org/). The [stable minimal install](https://www.debian.org/CD/netinst/) has been selected because of its minimal initial footprint, breadth of supported applications and, importantly, its stability.
-- A tiling window manager: [i3](https://i3wm.org/). This arranges applications and help give Devbox the feel of a single "application". It can arrange development tools such as the editor, terminal and browser. It enables these to be displayed full-screen or side by side in many different ways. It can also switch between multiple virtual desktops, supports keyboard shorcuts and exposes its features through a configuration file.
-- A shell : [Zsh](https://www.zsh.org/). This is used both interactively and for scripting. It is used as it has interactive features that make it useful for development.
+- **A virtual machine / hypervisor:** [VirtualBox](https://www.virtualbox.org/) and [VMWare Player](https://www.vmware.com/au/products/workstation-player.html) are both free and run on a Windows, MacOS or Linux host.
+- **A guest operating system:** [Debian](https://www.debian.org/). The [stable minimal install](https://www.debian.org/CD/netinst/) has been selected because of its minimal initial footprint, breadth of supported applications and, importantly, its stability.
+- **A tiling window manager:** [i3](https://i3wm.org/). This arranges applications and help give Devbox the feel of a single "application". It can arrange development tools such as the editor, terminal and browser. It enables these to be displayed full-screen or side by side in many different ways. It can also switch between multiple virtual desktops, supports keyboard shorcuts and exposes its features through a configuration file.
+- **A command line shell:** [Zsh](https://www.zsh.org/). This is used both interactively and for scripting. It is used as it has interactive features that make it useful for development.
 
 As these components are the core of this Devbox; they are not designed to be changed.
 
