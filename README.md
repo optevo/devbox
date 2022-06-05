@@ -1,5 +1,5 @@
 # Introduction
-This is a bevbox, your development box. Think of it as an application that runs "out of the box" to lets you start development in a matter of minutes. It includes an editor/IDE configured to work with the desired language(s) as well as all the tools and framworks configured and ready to use. The idea of virtual machine appliances (or containerised applications) is not new but they are generally not used for end user, visual applications.
+This is a Devbox, the only development tool you need (that's the goal eventually anyway). Think of it as an application that runs "out of the box" to lets you start development in a matter of minutes. It includes an editor/IDE configured to work with the desired language(s) as well as all the tools and framworks configured and ready to use. The idea of virtual machine appliances (or containerised applications) is not new but they are generally not used for end user, visual applications. While it "comes with batteries" attention has been paid to enabling Devbox to be extended and customised.
 
 # Architecture
 Standard components are applications that make up the core of Devbox. They are not likely to change. Each standard component has been selected from a range of alternatives for specific reasons.
@@ -10,19 +10,34 @@ Standard components are applications that make up the core of Devbox. They are n
 - A tiling window manager: [i3](https://i3wm.org/). This arranges applications and help give Devbox the feel of a single "application". It can arrange development tools such as the editor, terminal and browser. It enables these to be displayed full-screen or side by side in many different ways. It can also switch between multiple virtual desktops, supports keyboard shorcuts and exposes its features through a configuration file.
 - A shell : [Zsh](https://www.zsh.org/). This is used both interactively and for scripting. It is used as it has interactive features that make it useful for development.
 
-These components are the core of this Devbox; they are not designed to be substituted and if you like the idea of Devbox but don't like the components, fork it and change them. However, with these base set of components, Devbox can support multiple langauges and editors.
+As these components are the core of this Devbox; they are not designed to be changed.
 
+## Language specific components (LSCs)
+Devbox intends to support mulitple languages. Depending on the langauge, these may include compilers, build tools, runtimes, sdks and other components. These components follow these principles:
+- For any given language, if there is only a single component that can be used (e.g. a certain compiler version) it should be easily selectable (ideally by configuration). 
+- When components are installed for multiple languages, they should co-exist peacefully and be fully supported by development tools.
 
-# Debian base installation
-Using the graphical installer the following configuration is recommended:
+## Development tools (DTs)
+Devbox intends to support multiple development tools. The primary development tool is the editor or IDE. There are a variety of editors that are popular for development, such as vscode, emacs, vim, to name a few. Devbox is development tool agnostic. These components follow these principles:
+- Ideally, the latest stable version of each tool should be supported.
+- The tool should support all langauges specific components.
+
+As there may be multiple LSCs and DTs, there could end up being quite a large number of combinations supported. This is an area where the community can help contribute.
+
+# Installation
+Create a virtual machine instance with the desired configuration and set the CD drive to point to the Debian minimal install ISO available from [here](https://www.debian.org/CD/netinst/).
+
+Using Debian's graphical installer the following configuration is recommended:
 - Host name: host
 - User name: user
 - Password: pass
-- Install in one partition. Swap can be configured as a swap file rather than a swap partition so that swap size can be easily modified if the RAM of the VM is changed.
-- Don't install any packages; these will be setup from scratch in the next section.
+- Install in one partition. (Swap can be configured as a swap file rather than a swap partition so that swap size can be easily modified if the RAM of the VM is changed.)
+- Don't install any packages as part of this install; these will be setup from in the following sections after Debian has booted.
 
 # Setup root
 - Login as root
+
+The following applications will be installed:
 - sudo: Easy access to root commands from non root user
 - wget: Can download other scripts to execute. Smaller than curl
 - zsh: Has autocomplete and other features that makes development easier.
