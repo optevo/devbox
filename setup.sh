@@ -1,4 +1,8 @@
 #!/bin/sh
+if ! [ $(id -u) = 0 ]; then
+   echo "Must be run as root"
+   exit 1
+fi
 apt update
 apt install -y sudo
 adduser user sudo # enable sudo for user 'user'
