@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "Installing rust"
 # see https://www.rust-lang.org/tools/install
 if [ $(id -u) = 0 ]; then
    echo "Must not be run as root"
