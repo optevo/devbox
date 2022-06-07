@@ -3,8 +3,8 @@
 git clone https://github.com/optevo/devbox
 cd ~/devbox
 chmod u+x $(ls */setup.sh)
-./fish/setup.sh
-./rust/setup.sh
+fish/setup.sh
+rust/setup.sh
 cd ~
 #sudo rm -r devbox
 #rm $0
