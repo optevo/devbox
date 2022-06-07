@@ -18,6 +18,7 @@ sed -i "s/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/g" /etc/default/grub
 update-grub
 
 # Setup a script to run once when user 'user' logs in
+wget -q -O /home/user/.profile https://raw.githubusercontent.com/optevo/devbox/main/.profile
 wget -q -O /home/user/runonce.sh https://raw.githubusercontent.com/optevo/devbox/main/runonce.sh
 chown user /home/user/runonce.sh
 chmod a+wrx /home/user/runonce.sh
