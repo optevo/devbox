@@ -5,6 +5,8 @@ cd ~/devbox
 chmod u+x $(ls */setup.sh)
 fish/setup.sh
 rust/setup.sh
+i3/setup.sh
+rxvt-unicode/setup.sh
 vscoode/setup.sh
 cd ~
 #sudo rm -r devbox
