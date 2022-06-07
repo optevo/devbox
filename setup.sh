@@ -20,7 +20,10 @@ update-grub
 # Setup a script to run once when user 'user' logs in
 wget -q -O /home/user/.profile https://raw.githubusercontent.com/optevo/devbox/main/.profile
 wget -q -O /home/user/runonce.sh https://raw.githubusercontent.com/optevo/devbox/main/runonce.sh
-chown user /home/user/runonce.sh
-chmod a+wrx /home/user/runonce.sh
+
+chown user /home/user/*
+chgrp user /home/user/*
+
+chmod u+wx /home/user/runonce.sh
 
 reboot now # reboot and (auto)login as user 'user' to complete setup
