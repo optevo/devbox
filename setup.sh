@@ -4,7 +4,7 @@ if ! [ $(id -u) = 0 ]; then
    exit 1
 fi
 apt update
-apt install -y sudo
+apt install -y sudo git
 adduser user sudo # enable sudo for user 'user'
 sed -i "s/ExecStart=.*/ExecStart=-\/sbin\/agetty -a user %I/g" /lib/systemd/system/getty@.service # user will auto-login
 passwd -d root # The user 'root' can now switch to root (e.g. use su or sudo) without a password
