@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "Installing vscode"
 #See https://code.visualstudio.com/docs/setup/linux
 sudo apt install -y wget gpg apt-transport-https
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
