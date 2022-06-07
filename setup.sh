@@ -17,9 +17,9 @@ passwd -d user # The user 'user' can now switch to user without a password
 sed -i "s/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/g" /etc/default/grub
 update-grub
 
-# Install the .profile for the user 'user' that will run once invoking setup.sh to install applications / languages for each subfolder in this repository
-rm /home/user/.profile
-wget -q -O /home/user/.profile https://raw.githubusercontent.com/optevo/devbox/main/.profile
-chown user /home/user/.profile
-chmod a+wrx /home/user/.profile
-reboot now # reboot and (auto)login as user 'user' to complete setup
+# Setup a script to run once when user 'user' logs in
+wget -q -O /home/user/runonce.sh https://raw.githubusercontent.com/optevo/devbox/main/runonce.sh
+chown user /home/user/runonce.sh
+chmod a+wrx /home/user/runonce.sh
+echo "~/.runonce.sh" /home/user/.profile
+#reboot now # reboot and (auto)login as user 'user' to complete setup
