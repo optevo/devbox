@@ -3,6 +3,10 @@ if ! [ $(id -u) = 0 ]; then
    echo "Must be run as root"
    exit 1
 fi
+if ! [id "user" &>/dev/null ]; then
+    echo "User named 'user must exist"
+    exit 1
+fi
 apt update
 apt install -y sudo git
 adduser user sudo # enable sudo for user 'user'
