@@ -10,3 +10,4 @@ chmod u+x install_rust.sh
 ./install_rust.sh -y
 source $HOME/.cargo/env
 rm ./install_rust.sh
+rsync -avq . .. --exclude=$0
