@@ -4,5 +4,6 @@ git clone https://github.com/optevo/devbox
 chmod u+x $(ls */setup.sh)
 ./fish/setup.sh
 ./rust/setup.sh
+#sudo rm -r devbox
 #rm $0
 #sudo reboot now
