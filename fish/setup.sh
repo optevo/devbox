@@ -6,4 +6,4 @@ if [ $(id -u) = 0 ]; then
 fi
 sudo apt -q install -y --no-install-recommends fish
 chsh -s $(which fish)
-rsync -avq ./* ~ --exclude=$0
+rsync -avq ./fish ~ --exclude=$0
