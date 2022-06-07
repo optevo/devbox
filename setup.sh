@@ -4,8 +4,8 @@ if ! [ $(id -u) = 0 ]; then
    exit 1
 fi
 passwd -d root # The user 'root' can now switch to root (e.g. use su or sudo) without a password
-apt -q update
-apt -q install -y sudo git rsync
+apt update
+apt install -y sudo git rsync
 
 # Add user 'user' if they don't exist, add them to 'sudo' group, delete the 'user' password (if any) and setup 'user' for auto-login
 adduser user >/dev/null 2>&1 # Add user "user" if they don't exist
@@ -18,12 +18,10 @@ sed -i "s/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/g" /etc/default/grub
 update-grub
 
 # Setup a script to run once when user 'user' logs in
-wget -q -O /home/user/.profile https://raw.githubusercontent.com/optevo/devbox/main/.profile
 wget -q -O /home/user/runonce.sh https://raw.githubusercontent.com/optevo/devbox/main/runonce.sh
+wget -q -O /home/user/.profile https://raw.githubusercontent.com/optevo/devbox/main/.profile
 
-chown user /home/user/*
-chgrp user /home/user/*
-
-chmod u+wx /home/user/runonce.sh
+chown user /home/user/runonce.sh
+chmod a+wrx /home/user/runonce.sh
 
 reboot now # reboot and (auto)login as user 'user' to complete setup
