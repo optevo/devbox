@@ -24,4 +24,4 @@ chmod a+wrx /home/user/runonce.sh
 echo "if [ -x  /home/user/runonce.sh ]; then" >> /home/user/.bashrc
 echo "  /home/user/runonce.sh" >> /home/user/.bashrc
 echo "fi" >> /home/user/.bashrc
-#reboot now # reboot and (auto)login as user 'user' to complete setup
+reboot now # reboot and (auto)login as user 'user' to complete setup
