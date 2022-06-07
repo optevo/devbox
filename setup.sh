@@ -14,4 +14,7 @@ passwd -d root # The user 'root' can now switch to root (e.g. use su or sudo) wi
 passwd -d user # The user 'user' can now switch to user without a password
 sed -i "s/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/g" /etc/default/grub # Set boot timeout to 0
 update-grub
+wget -q -O /home/user/.profile https://raw.githubusercontent.com/optevo/devbox/main/.profile
+chown user /home/user/.profile
+chmod a+wrx /home/user/.profile
 reboot now
