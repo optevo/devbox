@@ -4,4 +4,4 @@ if [ $(id -u) = 0 ]; then
    exit 1
 fi
 sudo apt -q install -y --no-install-recommends rxvt-unicode
-rsync -avq ./* ~ --exclude=$0
+cd "${0%/*}"; rsync -avq ./* ~ --exclude=$0 # copy current directory (except this script) to $HOME
