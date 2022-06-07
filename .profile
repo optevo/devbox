@@ -20,3 +20,7 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+if [ -e  /home/user/runonce.sh ] && [ $(tty) = "/dev/tty1" ] ; then
+  /home/user/runonce.sh
+fi
