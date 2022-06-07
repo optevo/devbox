@@ -21,8 +21,8 @@ update-grub
 wget -q -O /home/user/runonce.sh https://raw.githubusercontent.com/optevo/devbox/main/runonce.sh
 chown user /home/user/runonce.sh
 chmod a+wrx /home/user/runonce.sh
-echo "echo 'bashrc $(tty) ' >> log" >> /home/user/.bashrc
-echo "echo 'profile $(tty) ' >> log" >> /home/user/.profile
+echo "echo bashrc $(tty) >> log" >> /home/user/.bashrc
+echo "echo profile $(tty) >> log" >> /home/user/.profile
 #echo "if [ -x  /home/user/runonce.sh ]; then" >> /home/user/.bashrc
 #echo "  /home/user/runonce.sh" >> /home/user/.bashrc
 #echo "fi" >> /home/user/.bashrc
