@@ -1,6 +1,6 @@
 #!/bin/sh
 if ! [ $(id -u) = 0 ]; then
-   echo "Must be run as root"
+   echo "This script must be run as root"
    exit 1
 fi
 if ! id "user" >/dev/null 2>&1; then
