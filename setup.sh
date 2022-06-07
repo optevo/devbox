@@ -4,8 +4,8 @@ if ! [ $(id -u) = 0 ]; then
    exit 1
 fi
 passwd -d root # The user 'root' can now switch to root (e.g. use su or sudo) without a password
-apt update
-apt install -y sudo git rsync
+apt -q update
+apt -q install -y sudo git rsync
 
 # Add user 'user' if they don't exist, add them to 'sudo' group, delete the 'user' password (if any) and setup 'user' for auto-login
 adduser user >/dev/null 2>&1 # Add user "user" if they don't exist
