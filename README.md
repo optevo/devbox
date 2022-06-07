@@ -13,9 +13,13 @@ I'd like each language or tool to auto-update as much as possible (with minimal 
 I welcome contributors! As I've mentioned, each tool or language will only have ever one configuration - the one I like the most. I'm happy to discuss how a specific tool or language is best configured and if I like it, I'll inlcude it. If not, you can always fork! :)
 
 # Base Setup
-To setup a clean, minimal install of Debian stable (presumably running in a virtual machine), login as root and execute:
+
+**WARNING** This is intended to be run on a clean, minimal install of Debian stable (presumably running in a virtual machine).
+
+Login as root and execute:
 
 ```
+# WARNING: only run on a fresh, minimal install of Debian 11
 apt install -y wget
 wget -O - https://raw.githubusercontent.com/optevo/devbox/main/setup.sh | sh
 
