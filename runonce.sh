@@ -7,7 +7,7 @@ fish/setup.sh
 rust/setup.sh
 i3/setup.sh
 rxvt-unicode/setup.sh
-vscoode/setup.sh
+vscode/setup.sh
 cd ~
 #sudo rm -r devbox
 #rm $0
