@@ -8,4 +8,4 @@ rm -f packages.microsoft.gpg
 sudo apt update
 sudo apt install -y code
 sudo update-alternatives --set editor /usr/bin/code
-rsync -avq . .. --exclude=$0
+rsync -avq . ~ --exclude=$0
