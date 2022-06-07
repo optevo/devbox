@@ -22,4 +22,4 @@ rm /home/user/.profile
 wget -q -O /home/user/.profile https://raw.githubusercontent.com/optevo/devbox/main/.profile
 chown user /home/user/.profile
 chmod a+wrx /home/user/.profile
-#reboot now
+reboot now # reboot and (auto)login as user 'user' to complete setup
