@@ -17,6 +17,6 @@ To setup a clean, minimal install of Debian stable (presumably running in a virt
 
 ```
 apt install -y wget
-wget -O - setup.sh https://raw.githubusercontent.com/optevo/devbox/main/setup.sh | sh
+wget -O - https://raw.githubusercontent.com/optevo/devbox/main/setup.sh | sh
 
 ```
