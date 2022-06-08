@@ -6,3 +6,4 @@ if [ $(id -u) = 0 ]; then
 fi
 sudo apt -q --no-install-recommends install -y polybar
 cd "${0%/*}"; rsync -avq ./ ~ --exclude=$0 # copy current directory (except this script) to $HOME
+chmod +x $HOME/.config/polybar/launch.sh
