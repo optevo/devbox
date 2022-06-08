@@ -1,3 +1,73 @@
+#---- Fira Code
+
+! Font to Fira Code Retina, 16px
+URxvt.font: xft:Fira Code Retina:style=Retina:pixelsize=16
+
+! Set Bold Font to Fira Code Bold, 16px
+URxvt.boldFont: xft:Fira Code:style=Bold:pixelsize:16
+
+! Set Italics Font to Fira Code Light, 16px
+URxvt.italicFont: xft:Fira Code:style=Light:pixelsize:16
+
+! Set Background Color
+URxvt.background: #1D262A
+
+! Set Foreground Color
+URxvt.foreground: #E7EBED
+
+! Set Color Scheme
+! Black
+URxvt.color0: #212121
+URxvt.color8: #263238
+
+! Red
+URxvt.color1: #b71c1c
+URxvt.color9: #ef5350
+
+! Green
+URxvt.color2: #004D40
+URxvt.color10: #26A69A
+
+! Yellow
+URxvt.color3: #F57F17
+URxvt.color11: #FFEE58
+
+! Blue
+URxvt.color4: #0D47A1
+URxvt.color12: #42A5F5
+
+! Magenta
+URxvt.color5: #4A148C
+URxvt.color13: #AB47BC
+
+! Cyan
+URxvt.color6: #006064
+URxvt.color14: #26C6DA
+
+! White
+URxvt.color7: #FAFAFA
+URxvt.color15: #FFFFFF
+
+! Use this color for bold
+URxvt.colorBD: #EAEAEA
+
+! Use this color for italics
+URxvt.colorIT: #EAEAEA
+
+! Use this color for underlined text
+URxvt.colorUL: #ef5350
+
+! PERL Extensions
+URxvt.perl-ext-common: default,matcher
+
+! Clickable URLs
+URxvt.url-launcher: /usr/bin/google-chrome-stable
+URxvt.matcher.button: 1
+URxvt.keysym.C-Delete: perl:matcher:last
+URxvt.keysym.M-Delete: perl:matcher:list
+
+#---- solarized dark
+
 #define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
