@@ -127,3 +127,11 @@ URxvt.keysym.M-Delete: perl:matcher:list
 
 ! Clipcoard
 URxvt.clipboard.autocopy: true
+
+!! Bind new keys
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+!! Unbind defaults
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
