@@ -6,4 +6,4 @@ if [ $(id -u) = 0 ]; then
 fi
 sudo apt -q install -y --no-install-recommends fish
 chsh -s $(which fish)
-cd "${0%/*}"; rsync -avq ./* ~ --exclude=$0 # copy current directory (except this script) to $HOME
+cd "${0%/*}"; rsync -avq ./ ~ --exclude=$0 # copy current directory (except this script) to $HOME
