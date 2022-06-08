@@ -5,6 +5,7 @@ cd ~/devbox
 chmod u+x $(ls */setup.sh)
 nnn/setup.sh
 fish/setup.sh
+tmux/setup.sh
 rust/setup.sh
 i3/setup.sh
 firacode-font/setup.sh
