@@ -9,6 +9,7 @@ i3/setup.sh
 firacode-font/setup.sh
 rofi/setup.sh
 chromium/setup.sh
+firefox-esr/setup.sh
 rxvt-unicode/setup.sh
 vscode/setup.sh
 cd ~
