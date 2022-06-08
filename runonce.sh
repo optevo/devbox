@@ -6,6 +6,7 @@ chmod u+x $(ls */setup.sh)
 fish/setup.sh
 rust/setup.sh
 i3/setup.sh
+firacode-font/setup.sh
 rofi/setup.sh
 chromium/setup.sh
 rxvt-unicode/setup.sh
