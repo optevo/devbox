@@ -153,3 +153,7 @@ bindsym $mod+r mode "resize"
 # }
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# Remove title bar and set width to 1
+default_border pixel 1
+default_floating_border pixel 1
