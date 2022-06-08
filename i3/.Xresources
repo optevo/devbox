@@ -1,4 +1,4 @@
-#---- Fira Code
+! Fira Code
 
 ! Font to Fira Code Retina, 16px
 URxvt.font: xft:Fira Code Retina:style=Retina:pixelsize=16
@@ -66,7 +66,7 @@ URxvt.matcher.button: 1
 URxvt.keysym.C-Delete: perl:matcher:last
 URxvt.keysym.M-Delete: perl:matcher:list
 
-#---- solarized dark
+! Solarized dark
 
 #define S_base03        #002b36
 #define S_base02        #073642
@@ -124,3 +124,6 @@ URxvt.keysym.M-Delete: perl:matcher:list
 !! white dark/light
 *color7:                S_base2
 *color15:               S_base3
+
+! Clipcoard
+URxvt.clipboard.autocopy: true
