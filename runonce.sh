@@ -9,6 +9,7 @@ tmux/setup.sh
 rust/setup.sh
 i3/setup.sh
 firacode-font/setup.sh
+polybar/setup.sh
 rofi/setup.sh
 chromium/setup.sh
 firefox-esr/setup.sh
