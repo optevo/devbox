@@ -3,6 +3,7 @@
 git clone https://github.com/optevo/devbox
 cd ~/devbox
 chmod u+x $(ls */setup.sh)
+nnn/setup.sh
 fish/setup.sh
 rust/setup.sh
 i3/setup.sh
