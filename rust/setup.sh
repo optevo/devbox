@@ -5,7 +5,7 @@ if [ $(id -u) = 0 ]; then
    echo "Must not be run as root"
    exit 1
 fi
-sudo apt -q --no-install-recommends install -y wget
+sudo apt -q install -y wget
 wget -q -O install_rust.sh https://sh.rustup.rs
 chmod u+x install_rust.sh
 ./install_rust.sh -y -q
